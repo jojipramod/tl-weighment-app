@@ -110,12 +110,11 @@ def extract_details_from_images(invoice_img: Image.Image, slip_img: Image.Image,
     )
 
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3.8-flash",
         contents=[invoice_img, slip_img, prompt],
         config=types.GenerateContentConfig(
             response_mime_type="application/json",
             response_schema=WeighmentExtraction,
-            temperature=0.0,
         ),
     )
 
@@ -134,6 +133,7 @@ def extract_details_from_images(invoice_img: Image.Image, slip_img: Image.Image,
         "Time of filling": parsed.time_of_filling,
         "Date of filling": parsed.date_of_filling,
     }
+
 
 
 # ---------------------------------------------------------
