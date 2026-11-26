@@ -1,0 +1,10 @@
+Plaintext
+
+streamlit
+opencv-python-headless
+pillow
+openpyxl
+pandas
+google-genai
+pydantic
+qrcode[pil]
